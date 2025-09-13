@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAE Gratuity Calculator - MOHRE Compliant Calculator</title>
+    <meta name="description" content="Calculate your end-of-service gratuity in UAE according to MOHRE regulations. Free online calculator for Dubai, Abu Dhabi, and all UAE emirates.">
+    <meta name="keywords" content="UAE gratuity calculator, MOHRE gratuity calculator, gratuity calculator Dubai, end of service benefits UAE, UAE labor law calculator">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>UAE Gratuity Calculator</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="https://sites.google.com/view/uae-gratuity-calculator-mohre/home" class="nav-link" target="_blank">MOHRE Gratuity Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sites.google.com/view/uae-gratuity-calculator/" class="nav-link" target="_blank">UAE Gratuity Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sites.google.com/view/mohre-gratuity-calculator-uae/" class="nav-link" target="_blank">Gratuity Calculator Dubai</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/gulzar-abbas" class="nav-link" target="_blank">Developer</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>UAE Gratuity Calculator</h1>
+          <p>Calculate your end-of-service gratuity according to UAE Labor Law and MOHRE regulations</p>
+          <div class="hero-tags">
+            <span class="tag">MOHRE Compliant</span>
+            <span class="tag">UAE Labor Law</span>
+            <span class="tag">Free Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+      <div class="container">
+        <div class="calculator-wrapper">
+          <div class="calculator-card">
+            <h2>Calculate Your Gratuity</h2>
+            <form id="gratuityForm" class="calculator-form">
+              <div class="form-group">
+                <label for="basicSalary">Basic Monthly Salary (AED)</label>
+                <input type="number" id="basicSalary" placeholder="Enter your basic salary" min="0" step="0.01" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="yearsWorked">Years of Service</label>
+                <input type="number" id="yearsWorked" placeholder="Enter years worked" min="0" step="0.1" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="monthsWorked">Additional Months</label>
+                <input type="number" id="monthsWorked" placeholder="Enter additional months" min="0" max="11" step="1">
+              </div>
+              
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="includeAllowances">
+                  <span class="checkmark"></span>
+                  Include housing & transport allowances in calculation
+                </label>
+              </div>
+              
+              <div class="form-group" id="allowancesGroup" style="display: none;">
+                <label for="allowances">Monthly Allowances (AED)</label>
+                <input type="number" id="allowances" placeholder="Enter total allowances" min="0" step="0.01">
+              </div>
+              
+              <button type="submit" class="calculate-btn">Calculate Gratuity</button>
+            </form>
+          </div>
+          
+          <div class="result-card" id="resultCard" style="display: none;">
+            <h3>Your Gratuity Calculation</h3>
+            <div class="result-summary">
+              <div class="result-item">
+                <span class="result-label">Total Gratuity Amount:</span>
+                <span class="result-value" id="totalGratuity">AED 0</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Years of Service:</span>
+                <span class="result-value" id="serviceYears">0 years</span>
+              </div>
+              <div class="result-item">
+                <span class="result-label">Monthly Salary:</span>
+                <span class="result-value" id="monthlySalary">AED 0</span>
+              </div>
+            </div>
+            
+            <div class="calculation-breakdown" id="calculationBreakdown">
+              <!-- Breakdown will be inserted here -->
+            </div>
+            
+            <div class="result-notes">
+              <h4>Important Notes:</h4>
+              <ul>
+                <li>Calculation based on UAE Labor Law Federal Law No. 8 of 1980</li>
+                <li>Maximum gratuity is limited to two years' salary</li>
+                <li>Partial year service is calculated proportionally</li>
+                <li>Final amount may vary based on employment contract terms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">⚖️</div>
+            <h3>UAE Labor Law Compliant</h3>
+            <p>Our calculator follows the official UAE Labor Law regulations and MOHRE guidelines for end-of-service gratuity calculations.</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">📊</div>
+            <h3>Accurate Calculations</h3>
+            <p>Get precise gratuity calculations based on your years of service, salary, and allowances with detailed breakdown.</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">🏢</div>
+            <h3>All UAE Emirates</h3>
+            <p>Valid for employees working in Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain.</p>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">💼</div>
+            <h3>Free & Confidential</h3>
+            <p>Use our gratuity calculator for free without registration. Your data is not stored or shared with third parties.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Links Section -->
+    <section class="links-section">
+      <div class="container">
+        <h2>Related Calculators & Resources</h2>
+        <div class="links-grid">
+          <a href="https://sites.google.com/view/uae-gratuity-calculator-mohre/home" class="link-card" target="_blank">
+            <h4>MOHRE Gratuity Calculator</h4>
+            <p>Official MOHRE compliant gratuity calculator for UAE employees</p>
+          </a>
+          
+          <a href="https://sites.google.com/view/uae-gratuity-calculator/" class="link-card" target="_blank">
+            <h4>Gratuity Calculator UAE</h4>
+            <p>Comprehensive UAE gratuity calculation tool with detailed explanations</p>
+          </a>
+          
+          <a href="https://sites.google.com/view/mohre-gratuity-calculator-uae/" class="link-card" target="_blank">
+            <h4>UAE Gratuity Calculator MOHRE</h4>
+            <p>Calculate end-of-service benefits according to UAE labor regulations</p>
+          </a>
+          
+          <a href="https://github.com/gulzar-abbas" class="link-card" target="_blank">
+            <h4>Developer Portfolio</h4>
+            <p>View more projects and tools by Gulzar Abbas</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>UAE Gratuity Calculator</h3>
+            <p>Calculate your end-of-service gratuity according to UAE Labor Law and MOHRE regulations. Free, accurate, and compliant with UAE employment laws.</p>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="https://sites.google.com/view/uae-gratuity-calculator-mohre/home" target="_blank">MOHRE Gratuity Calculator</a></li>
+              <li><a href="https://sites.google.com/view/uae-gratuity-calculator/" target="_blank">Gratuity Calculator UAE</a></li>
+              <li><a href="https://sites.google.com/view/mohre-gratuity-calculator-uae/" target="_blank">Gratuity Calculator Dubai</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Keywords</h4>
+            <div class="footer-tags">
+              <span>UAE Gratuity Calculator</span>
+              <span>MOHRE Gratuity Calculator</span>
+              <span>Gratuity Calculator Dubai</span>
+              <span>End of Service Benefits</span>
+              <span>UAE Labor Law</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 UAE Gratuity Calculator. For educational purposes only. Please consult with legal professionals for official calculations.</p>
+          <p>Developed by <a href="https://github.com/gulzar-abbas" target="_blank">Gulzar Abbas</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
